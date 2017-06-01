@@ -1,0 +1,39 @@
+.footerContent {
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	width: 1140px;
+
+	article {
+		margin: 6rem 0;
+		width: calc(25% - 30px);
+
+		h4 {
+			text-transform: uppercase;
+			font: 1.4rem/2.1rem 'Open Sans';
+			color: #919191;
+			margin-bottom: 2rem;
+		}
+
+		p {
+			font: 1.2rem/1.8rem 'Open Sans';
+			color: #474747;
+			margin-bottom: 2rem;
+		
+			a {
+				font-style: italic;
+				text-decoration: none;
+				color: #5c5c5c;
+
+				&:hover {
+					color: #bbb;
+				}
+			}
+		}
+		
+		img {
+			display: block;
+			width: 167px;
+		}
+	}
+}

@@ -1,0 +1,47 @@
+.gallery {
+    display: flex;
+    flex-flow: wrap;
+	margin-bottom: 10rem;
+	
+	article {
+		width: 25%;
+		position: relative;
+		overflow: hidden;
+		
+		h3 {
+			text-transform: uppercase;
+			font: 1.2rem/2.1rem 'Open Sans';
+			color: white;
+		}
+		
+		p {
+			color: #9f9e9e;
+			font: 1.2rem/2.1rem 'Open Sans';
+		}
+		
+		img {
+			display: block;
+			width: 211px;
+		}
+		
+		a {
+			text-decoration: none;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,.5);
+			color: #fff;
+			top: -100%;
+			left: 0;
+			padding: 1rem;
+			transition: top 1s;
+			display: flex;
+			flex-flow: column;
+			justify-content: flex-end;
+		}
+		
+		&:hover a {
+			top: 0;
+		}
+	} 
+}
