@@ -1,3 +1,6 @@
+$width: 1140px;
+$gap: 40px;
+
 * {
     box-sizing: border-box; 
     padding:0;
@@ -15,13 +18,15 @@ body {
 	
 	.header {
 		background: #fff;
+
 	}
 
 	.main {
 		background: #f6f6f6;
+    
 		
 		.mainContent {
-			width: 1140px;
+			width: $width;
 			margin: auto;
 			
 			.doubleCol {
@@ -32,7 +37,7 @@ body {
 					margin-top: 4rem;
 					padding: 1.5rem 0 0;
 					border-top: .1rem dotted #959595;
-					width: calc(25% - 20px);
+					width: ($width / 4 - (($gap/4)*3));
 					font: 1.4rem/2.1rem 'Open Sans';
 					text-transform: uppercase;
 					color: #565656;
@@ -40,14 +45,14 @@ body {
     
 				.content {
 					margin-top: 4rem;
-					width: calc(75% - 20px);
+					width: ($width / 4) * 3 - ($gap / 2);
 				}
 			}
 		}
 	}
 
 	.footer {
-		background-color: #171717;
+		background: #171717;
 	}
 }
 

@@ -24,15 +24,15 @@ body {
           margin-top: 4rem;
           padding: 1.5rem 0 0;
           border-top: .1rem dotted #959595;
-          width: calc(25% - 20px);
+          width: 255px;
           font: 1.4rem/2.1rem 'Open Sans';
           text-transform: uppercase;
           color: #565656; }
         body .main .mainContent .doubleCol .content {
           margin-top: 4rem;
-          width: calc(75% - 20px); }
+          width: 835px; }
   body .footer {
-    background-color: #171717; }
+    background: #171717; }
 
 .headerContent {
   margin: auto;
@@ -40,7 +40,7 @@ body {
   justify-content: space-between;
   width: 1140px; }
   .headerContent .logo {
-    width: calc(25% - 20px);
+    width: 255px;
     margin-top: 8.5rem;
     position: relative; }
     .headerContent .logo img {
@@ -65,7 +65,7 @@ body {
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
-    width: calc(75% - 20px); }
+    width: 845px; }
   .headerContent h1 {
     color: #565656;
     font: 300 3rem/3.6rem 'Open Sans';
