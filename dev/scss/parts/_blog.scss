@@ -1,6 +1,9 @@
+$font-family: 'Open Sans';
+
 .blog {
     display: flex;
     flex-flow: wrap;
+    justify-content: flex-start;
     
 	article {
 		width: calc((100% - 80px)/3);
@@ -9,13 +12,13 @@
 		h3 {
 			margin-top: 1.8rem;
 			color: #565656;
-			font: 1.5rem/2.1rem 'Open Sans';
+			font: 1.5rem/2.1rem $font-family;
 		}
 		
 		p {
 			margin-top: 1.8rem;
 			color: #959595;
-			font: 1.2rem/1.8rem 'Open Sans';
+			font: 1.2rem/1.8rem $font-family;
 		}
     
 		&:nth-of-type(3n) {

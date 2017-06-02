@@ -16,19 +16,16 @@ body {
 	color: black;
 	font: 1.4rem/2.1rem 'Open Sans';
 	background: #fefefe;
-	position: absolute;
-//	margin: auto;
-	width: 100%;
 	
 	.header {
 		background: #fff;
 	}
 
 	.main {
+        position: relative;
 		background: #f6f6f6;
     
 		.mainContent {
-			position: relative;
 			width: $width;
 			margin: auto;
 			
@@ -37,10 +34,10 @@ body {
 				justify-content: space-between;
     
 				.title {
-					margin-top: 4rem;
+					margin: 4rem 4rem 0 0;
 					padding: 1.5rem 0 0;
 					border-top: .1rem dotted #959595;
-					width: $width / 4 - ($gap*0.75);
+					width: ($width - ($gap * 3)) / 4;
 					font: 1.4rem/2.1rem 'Open Sans';
 					text-transform: uppercase;
 					color: #565656;

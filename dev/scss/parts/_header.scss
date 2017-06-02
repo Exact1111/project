@@ -9,8 +9,8 @@ $gap: 40px;
 	position: relative;
 	
 	.logo {
-		width: ($width / 4 - ($gap*0.75));
-		margin-top: 8.5rem;
+		width: ($width - ($gap * 3)) / 4;
+		margin: 8.5rem 4rem 0 0;
 		position: relative;
 		
 		img {

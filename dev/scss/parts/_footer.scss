@@ -9,9 +9,13 @@ $gap: 40px;
 	
 
 	article {
-		margin: 6rem 0;
-		width: $width / 4 - ($gap*0.75);
-
+		margin: 6rem 4rem 0 0;
+		width: ($width - ($gap * 3)) / 4;
+        
+        &:nth-of-type(4n) {
+			margin-right: 0;
+		}
+        
 		h4 {
 			text-transform: uppercase;
 			font: 1.4rem/2.1rem 'Open Sans';

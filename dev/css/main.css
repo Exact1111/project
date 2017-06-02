@@ -9,22 +9,20 @@ html {
 body {
   color: black;
   font: 1.4rem/2.1rem 'Open Sans';
-  background: #fefefe;
-  position: absolute;
-  width: 100%; }
+  background: #fefefe; }
   body .header {
     background: #fff; }
   body .main {
+    position: relative;
     background: #f6f6f6; }
     body .main .mainContent {
-      position: relative;
       width: 1140px;
       margin: auto; }
       body .main .mainContent .doubleCol {
         display: flex;
         justify-content: space-between; }
         body .main .mainContent .doubleCol .title {
-          margin-top: 4rem;
+          margin: 4rem 4rem 0 0;
           padding: 1.5rem 0 0;
           border-top: .1rem dotted #959595;
           width: 255px;
@@ -45,7 +43,7 @@ body {
   position: relative; }
   .headerContent .logo {
     width: 255px;
-    margin-top: 8.5rem;
+    margin: 8.5rem 4rem 0 0;
     position: relative; }
     .headerContent .logo img {
       position: absolute;
@@ -112,18 +110,19 @@ body {
 
 .blog {
   display: flex;
-  flex-flow: wrap; }
+  flex-flow: wrap;
+  justify-content: flex-start; }
   .blog article {
     width: calc((100% - 80px)/3);
     margin: 0 40px 100px 0; }
     .blog article h3 {
       margin-top: 1.8rem;
       color: #565656;
-      font: 1.5rem/2.1rem 'Open Sans'; }
+      font: 1.5rem/2.1rem "Open Sans"; }
     .blog article p {
       margin-top: 1.8rem;
       color: #959595;
-      font: 1.2rem/1.8rem 'Open Sans'; }
+      font: 1.2rem/1.8rem "Open Sans"; }
     .blog article:nth-of-type(3n) {
       margin-right: 0; }
   .blog .backgroundLink {
@@ -196,8 +195,10 @@ body {
   justify-content: space-between;
   width: 1140px; }
   .footerContent article {
-    margin: 6rem 0;
+    margin: 6rem 4rem 0 0;
     width: 255px; }
+    .footerContent article:nth-of-type(4n) {
+      margin-right: 0; }
     .footerContent article h4 {
       text-transform: uppercase;
       font: 1.4rem/2.1rem 'Open Sans';
