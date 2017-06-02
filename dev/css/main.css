@@ -9,12 +9,15 @@ html {
 body {
   color: black;
   font: 1.4rem/2.1rem 'Open Sans';
-  background: #fefefe; }
+  background: #fefefe;
+  position: absolute;
+  width: 100%; }
   body .header {
     background: #fff; }
   body .main {
     background: #f6f6f6; }
     body .main .mainContent {
+      position: relative;
       width: 1140px;
       margin: auto; }
       body .main .mainContent .doubleCol {
@@ -30,7 +33,7 @@ body {
           color: #565656; }
         body .main .mainContent .doubleCol .content {
           margin-top: 4rem;
-          width: 835px; }
+          width: 845px; }
   body .footer {
     background: #171717; }
 
@@ -38,7 +41,8 @@ body {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  width: 1140px; }
+  width: 1140px;
+  position: relative; }
   .headerContent .logo {
     width: 255px;
     margin-top: 8.5rem;
@@ -168,8 +172,7 @@ body {
       color: #9f9e9e;
       font: 1.2rem/2.1rem 'Open Sans'; }
     .gallery article img {
-      display: block;
-      width: 211px; }
+      display: block; }
     .gallery article a {
       text-decoration: none;
       position: absolute;
@@ -194,7 +197,7 @@ body {
   width: 1140px; }
   .footerContent article {
     margin: 6rem 0;
-    width: calc(25% - 30px); }
+    width: 255px; }
     .footerContent article h4 {
       text-transform: uppercase;
       font: 1.4rem/2.1rem 'Open Sans';
@@ -211,5 +214,4 @@ body {
         .footerContent article p a:hover {
           color: #bbb; }
     .footerContent article img {
-      display: block;
-      width: 167px; }
+      display: block; }

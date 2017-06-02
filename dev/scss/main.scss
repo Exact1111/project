@@ -9,23 +9,26 @@ $gap: 40px;
 
 html {
     font-size:62.5%;
+	
 }
 
 body {
 	color: black;
 	font: 1.4rem/2.1rem 'Open Sans';
 	background: #fefefe;
+	position: absolute;
+//	margin: auto;
+	width: 100%;
 	
 	.header {
 		background: #fff;
-
 	}
 
 	.main {
 		background: #f6f6f6;
     
-		
 		.mainContent {
+			position: relative;
 			width: $width;
 			margin: auto;
 			
@@ -37,7 +40,7 @@ body {
 					margin-top: 4rem;
 					padding: 1.5rem 0 0;
 					border-top: .1rem dotted #959595;
-					width: ($width / 4 - (($gap/4)*3));
+					width: $width / 4 - ($gap*0.75);
 					font: 1.4rem/2.1rem 'Open Sans';
 					text-transform: uppercase;
 					color: #565656;
@@ -45,7 +48,7 @@ body {
     
 				.content {
 					margin-top: 4rem;
-					width: ($width / 4) * 3 - ($gap / 2);
+					width: ($width / 4) * 3 - ($gap / 4);
 				}
 			}
 		}
@@ -61,3 +64,4 @@ body {
 @import 'parts/blog';
 @import 'parts/gallery';
 @import 'parts/footer';
+//@import 'adaptive/main';

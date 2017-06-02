@@ -1,12 +1,16 @@
+$width: 1140px;
+$gap: 40px;
+
 .footerContent {
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
-	width: 1140px;
+	width: $width;
+	
 
 	article {
 		margin: 6rem 0;
-		width: calc(25% - 30px);
+		width: $width / 4 - ($gap*0.75);
 
 		h4 {
 			text-transform: uppercase;
@@ -33,7 +37,6 @@
 		
 		img {
 			display: block;
-			width: 167px;
 		}
 	}
 }

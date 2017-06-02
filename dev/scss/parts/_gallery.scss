@@ -1,3 +1,6 @@
+$width: 1140px;
+$gap: 40px;
+
 .gallery {
     display: flex;
     flex-flow: wrap;
@@ -21,7 +24,6 @@
 		
 		img {
 			display: block;
-			width: 211px;
 		}
 		
 		a {
