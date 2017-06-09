@@ -1,0 +1,45 @@
+.menu {
+	margin: 0 0 2rem 2rem;
+	position: relative;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: flex-start;
+
+	li {
+		list-style: none;
+	}
+
+	a {
+		padding-bottom: 1.5rem;
+		font: 600 1.5rem/3.6rem 'Open Sans';
+		text-transform: uppercase;
+		margin-right: 2rem;
+		text-decoration: none;
+		color: #959595;
+
+		&:hover {
+			color: #565656;
+			border-bottom: .1rem solid #565656;
+		}
+
+		&:nth-of-type(6) {
+			margin-right: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	.menu {
+		margin-left: 0;
+	}	
+	
+}
+
+@media screen and (min-width: 1170px) {
+
+	.menu {
+		margin-bottom: 9rem;
+	}	
+	
+}

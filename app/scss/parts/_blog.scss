@@ -1,0 +1,136 @@
+$fontFamily: 'Open Sans';
+$widthBlock: 255px;
+
+.blog {
+	margin: 4rem 0 6rem 0;
+	article {
+		width: $widthBlock;
+		margin: auto;
+		h3 {
+			padding-bottom: 1.4rem;
+			color: #565656;
+			font: 1.5rem/2.1rem $fontFamily;
+		}
+		p {
+			padding-bottom: 4rem;
+			color: #959595;
+			font: 1.2rem/1.8rem $fontFamily;
+		}
+	}	
+}
+	
+.backgroundLink { 
+	margin-bottom: 1.8rem;
+    position: relative;
+	img {
+		position: relative;
+		display: block;
+		width: $widthBlock;
+	}
+    a {
+        width: $widthBlock;
+        height: 100%;
+        display: block;
+        background: rgba(0,0,0,.3);
+        position: absolute;
+        top: 0;
+        &::after {
+            content: '';
+            display: block;
+            background: url(../images/link.png);
+            width: 36px;
+            height: 36px;
+            position: relative;
+            top: calc(50% - (33px/2));
+            left: calc(50% - (33px/2));
+        } 
+	}
+}
+
+@media screen and (min-width: 768px) {
+	
+	$gap: 2rem;
+	
+	.blog {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: flex-start;
+		&:last-child {
+			padding-bottom: 0;
+		}
+		article {
+			width: 255px;
+			margin-right: $gap;
+			&:nth-of-type(2n+2) {
+				margin-right: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	.backgroundLink { 
+		position: relative;
+
+		img {
+			left: 0;
+		}
+
+		a {
+			left: 0;
+		}
+	}
+	
+}
+
+@media screen and (min-width: 1170px) {
+
+	$gap: 4rem;
+	
+	@keyframes rotate {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(180deg);
+		}
+	}
+	
+	.blog {
+		article {
+			margin-right: $gap;
+			&:nth-of-type(2) {
+				margin-right: $gap;
+			}
+			&:nth-of-type(3n+3) {
+				margin-right: 0;
+			}
+			&:hover h3{
+				color: black;
+			}
+		}
+	}
+	.backgroundLink { 
+		overflow: hidden;
+		position: relative;
+		img {
+			left: 0;
+		}
+		a {
+			background: rgba(0,0,0,.5);
+			top: -100%;
+			left: 0;
+			transition: top 1s;
+			&::after {
+				transition: rotate 2s ease .5s;
+			}
+		}
+		&:hover a{
+			top: 0;
+        }
+		&:hover a::after {
+			animation: rotate 1s linear 1 forwards;
+		}
+	}
+}
+

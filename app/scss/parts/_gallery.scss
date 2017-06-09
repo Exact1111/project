@@ -1,0 +1,88 @@
+.gallery {
+	padding-bottom: 10rem;
+	margin-top: 4rem;
+	article {
+		position: relative;
+		h3 {
+			text-transform: uppercase;
+			font: 1.2rem/2.1rem 'Open Sans';
+			color: white;
+		}
+		p {
+			color: #9f9e9e;
+			font: 1.2rem/2.1rem 'Open Sans';
+		}
+		img {
+			position: relative;
+			left: calc(50vw - (211px / 2));
+			display: block;
+			width: 211px;
+		}
+		a {
+			text-decoration: none;
+			position: absolute;
+			width: 211px;
+			height: 100%;
+			background: rgba(0,0,0,.3);
+			color: #fff;
+			top: 0;
+			left: calc(50vw - (211px/2));
+			padding: 1rem;
+			transition: top 1s;
+			display: flex;
+			flex-flow: column;
+			justify-content: flex-end;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	
+	$width: 530px;
+	
+	.gallery {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: flex-start;
+		article {
+			left: 0;
+			
+			img {
+				left: 0;
+				width: calc($width / 3);
+			}
+			a {
+				left: 0;
+				width: calc($width / 3);
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1170px) {
+	
+	$width: 845px;
+	
+	.gallery {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: flex-start;
+		article {
+			overflow: hidden;
+			left: 0;
+			img {
+				left: 0;
+				width: calc($width / 4);
+			}
+			a {
+				top: -100%;
+				left: 0;
+				width: calc($width / 4);
+				background: rgba(0,0,0,.5);
+			}
+			&:hover a {
+				top: 0;
+			}
+		}
+	}
+}

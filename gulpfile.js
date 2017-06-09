@@ -1,32 +1,39 @@
 'use strict';
 
-// REQUIRES
-///////////////////////////////////////////////
-
+// requires
+//////////////////////
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    sync = require('browser-sync');
+    pug = require('gulp-pug'),
+    sync = require('browser-sync'),
+    cleancss = require('gulp-clean-css'),
+    del = require('del');
 
-// PATH
-///////////////////////////////////////////////
-
+// path
+//////////////////////
 var path = {
     src: { 
-        html: 'dev/*.html',
-        css: 'dev/css/'
+        html: 'app/*.html',
+        pug: 'app/pug/*.pug',
+        css: 'app/css/',
+        cssinput: 'app/css/**/*.css'
     },
     watch: {
-        html: 'dev/**/*.html',
-        scss: 'dev/scss/**/*.scss'        
+        pug: 'app/pug/**/*.pug',
+        scss: 'app/scss/**/*.scss'        
     },
-    basedir: 'dev/'
+    build: {
+        basedir: 'dest/',
+        css: 'dest/css/'
+    },
+    basedir: 'app/'
 };
 
-// SYNC
-///////////////////////////////////////////////
+// watch
+//////////////////////
 
-// sync:server
-gulp.task('sync:server', function() {
+// watch:server
+gulp.task('watch:server', function() {
     sync({
         server: {
             baseDir: path.basedir            
@@ -37,16 +44,8 @@ gulp.task('sync:server', function() {
     });
 });
 
-// sync:html
-gulp.task('sync:html', function() {
-    return gulp.src(path.watch.html)
-        .pipe(sync.reload({
-            stream: true
-        }));    
-});
-
-// sync:css&sass
-gulp.task('sync:sass', function() {
+// watch:sass
+gulp.task('watch:sass', function() {
     return gulp.src(path.watch.scss)
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(path.src.css))
@@ -55,10 +54,43 @@ gulp.task('sync:sass', function() {
         }));
 });
 
-// WATCH
-///////////////////////////////////////////////
-
-gulp.task('watch',['sync:server', 'sync:html', 'sync:sass'], function() {
-    gulp.watch(path.watch.scss, ['sync:sass']); 
-    gulp.watch(path.watch.html, ['sync:html']); 
+// watch:pug
+gulp.task('watch:pug', function() {
+    return gulp.src(path.src.pug)
+        .pipe(pug({
+            pretty: true
+        })
+        .on('error', function(error) {
+            console.log(error);
+            this.end();
+           })
+        )      
+        .pipe(gulp.dest(path.basedir))
+        .pipe(sync.reload({
+            stream: true
+        }));
 });
+
+// watch all
+gulp.task('watch', ['watch:server','watch:pug','watch:sass'], function() {
+    gulp.watch(path.watch.pug, ['watch:pug']);
+    gulp.watch(path.watch.scss, ['watch:sass']);    
+})
+
+// build
+//////////////////////
+
+// build:html
+gulp.task('build:css', function() {
+    gulp.src(path.src.cssinput)
+        .pipe(cleancss())        
+        .pipe(gulp.dest(path.build.css));
+});
+
+// build:clean
+gulp.task('build:clean', function() {
+    return del.sync(path.build.basedir);
+});
+
+// build all
+gulp.task('build', ['build:clean', 'build:css']);

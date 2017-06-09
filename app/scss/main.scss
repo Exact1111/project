@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box; 
+    padding:0;
+    margin:0;
+}
+
+html {
+    font-size:62.5%;
+	body {
+		width: 100%;
+		margin: auto;
+		color: black;
+		background: #fefefe;
+
+		.header {
+			background: #fff;
+		}
+		.main {
+			background: #f6f6f6;
+			.title {
+				margin: 4rem 0 2rem 0;
+				border-top: .1rem dotted #959595;
+				font: 1.4rem/2.1rem 'Open Sans';
+				text-transform: uppercase;
+				color: #565656;
+			}
+		}
+		.footer {
+			background: #171717;
+		}
+	}
+}
+
+@import 'parts/header';
+@import 'parts/logo';
+@import 'parts/menu';
+@import 'parts/blog';
+@import 'parts/gallery';
+@import 'parts/footer';
+
+@media screen and (min-width: 768px) {
+	
+	$width: 768px;
+	$gap: 2rem;
+	
+	.mainContent {
+		width: $width;
+		margin: auto;
+		.doubleCol {
+			width: $width;
+			display: flex;
+			justify-content: space-between;
+			.title {
+				width: 218px;
+			}
+			.content {
+				width: 530px;
+			}
+		}
+	}
+}
+	
+@media screen and (min-width: 1170px) {
+	
+	$width: 1140px;
+	$gap: 4rem;
+	
+	.mainContent {
+		width: $width;
+		.doubleCol {
+			width: $width;
+			.title {
+				width: 255px;
+				margin-right: $gap;
+				margin-bottom: 0;
+			}
+			.content {
+				width: 845px;
+			}
+		}
+	}
+}
+	
+	
+	
+	

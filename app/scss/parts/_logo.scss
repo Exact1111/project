@@ -1,0 +1,49 @@
+.headerContent {
+	.logo {
+		margin: 0 0 0 2rem;
+		img {
+			position: relative;
+			width: 60px;
+			height: 70px;
+			left: 30px;
+			top: 5px;
+		}
+		a {
+			text-decoration: none;
+			font: 600 3.6rem/2.1rem 'Open Sans';
+			color: #3d3d3d;
+			position: relative;
+			top: -45px;
+			span {
+				color: #bbb;
+			}
+		}	
+	}
+}
+
+@media screen and (min-width: 768px) {
+	
+	.headerContent {
+		.logo {
+			width: 218px;
+			margin: 4rem 2rem 0 0;
+			a {
+				top: -75px;
+			}
+			img {
+				top: -25px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1170px) {
+	
+	.headerContent {
+		width: 1140px;
+		.logo {
+			width: 255px;
+			margin: 8.5rem 4rem 0 0;
+		}
+	}
+}
