@@ -59,8 +59,7 @@ $widthBlock: 255px;
 			padding-bottom: 0;
 		}
 		article {
-			width: 255px;
-			margin-right: $gap;
+			margin: 0 $gap 0 0;
 			&:nth-of-type(2n+2) {
 				margin-right: 0;
 			}

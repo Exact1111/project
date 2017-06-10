@@ -15,6 +15,7 @@ html {
     html body .main {
       background: #f6f6f6; }
       html body .main .title {
+        padding-top: 1.8rem;
         margin: 4rem 0 2rem 0;
         border-top: .1rem dotted #959595;
         font: 1.4rem/2.1rem 'Open Sans';
@@ -196,8 +197,7 @@ html {
     .blog:last-child {
       padding-bottom: 0; }
     .blog article {
-      width: 255px;
-      margin-right: 2rem; }
+      margin: 0 2rem 0 0; }
       .blog article:nth-of-type(2n+2) {
         margin-right: 0; }
       .blog article:last-child {
