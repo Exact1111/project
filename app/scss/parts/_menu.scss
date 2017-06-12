@@ -17,7 +17,7 @@
 		text-decoration: none;
 		color: #959595;
 
-		&:hover {
+		&:active {
 			color: #565656;
 			border-bottom: .1rem solid #565656;
 		}
@@ -40,6 +40,10 @@
 
 	.menu {
 		margin-bottom: 9rem;
+		a:hover {
+			color: #565656;
+			border-bottom: .1rem solid #565656;
+		}
 	}	
 	
 }
